@@ -1,2 +1,2 @@
 # HH_Items
-Household Items for Sale
+Household Items

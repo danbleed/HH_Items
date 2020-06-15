@@ -1,8 +1,14 @@
 function init() {
-Tabletop.init( { key: ‘https://docs.google.com/spreadsheets/d/e/2PACX-1vQFoScCD9ajngZA12tWH9e3lcXZewrMhi6mV3EZHdQWqWwkTTrP66aE8BW7HYMTxVq8YP6VdhP0rWUG/pubhtml',
-callback: showInfo,
-simpleSheet: true } )
-}
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vQFoScCD9ajngZA12tWH9e3lcXZewrMhi6mV3EZHdQWqWwkTTrP66aE8BW7HYMTxVq8YP6VdhP0rWUG/pub?output=csv', {
+          download: true,
+          header: true,
+          complete: function(results) {
+            var data = results.data
+            console.log(data)
+          }
+        })
+window.addEventListener('DOMContentLoaded', init)
+  
 function showInfo(data, tabletop) {
 console.log(data);
 for (var i = 0; i < data.length; i++) {

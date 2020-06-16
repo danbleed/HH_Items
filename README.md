@@ -1,2 +1,6 @@
 # HH_Items
-Household Items
+
+### Under construction. Please check back later. 
+
+### Thanks.
+
